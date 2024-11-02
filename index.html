@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Màn hình chào đón với nút bắt đầu -->
+    <div id="welcome-screen">
+      <div class="fullscreen-bg">
+        <button id="start-button"><b>Bắt đầu</b></button>
+      </div>
+    </div>
+
+    <!-- Giao diện câu hỏi -->
+    <div id="question-screen" style="display: none">
+      <p id="question-text"><b>Câu hỏi số 1</b></p>
+      <p id="timer"><b>Thời gian: 0.000 giây</b></p>
+      <video id="video" width="640" height="360" controls></video>
+      <div class="button-group">
+        <button id="stop-timer-button"><b>Dừng thời gian</b></button>
+        <button id="next-question-button"><b>Câu tiếp theo</b></button>
+      </div>
+    </div>
+
+    <!-- Thông báo kết thúc quiz -->
+    <div id="end-screen" style="display: none">
+      <p><b>Quiz đã kết thúc! Cảm ơn bạn đã tham gia.</b></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

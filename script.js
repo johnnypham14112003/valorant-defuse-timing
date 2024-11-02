@@ -11,6 +11,19 @@ const delayTime = 1725; // Thời gian delay 1 giây 73 mili giây
 const videoSuccess = "defuse-success.mp4"; // Đường dẫn đến video A
 const videoFail = "defuse-late.mp4"; // Đường dẫn đến video B
 
+// Preload videos into cache
+function preloadVideos() {
+  const videoPaths = ["plant-spike.mp4", "defuse-success.mp4", "defuse-late.mp4"];
+  videoPaths.forEach((videoSrc) => {
+    const video = document.createElement("video");
+    video.src = videoSrc;
+    video.preload = "auto";
+  });
+}
+
+// Gọi hàm này khi trang vừa được load
+window.addEventListener("load", preloadVideos);
+
 // Bắt đầu ứng dụng
 document.getElementById("start-button").addEventListener("click", () => {
   document.getElementById("welcome-screen").style.display = "none";
